@@ -1,15 +1,17 @@
 # python-_random-module
-简单的python _random模块使用(不是random模块)
-通过简单的加密来一行实现random(((
-使用:
 
-import random
-random.random()#返回0-1之间的小数
+### https://github.com/python/cpython/blob/main/Modules/_randommodule.c
 
-random.random是random.a的一个方法,random.a=random.Random(),random.Random=_random.Random
-该模块包含了_random.Random的所有方法并作为一个简单的使用例子,可以改写Random的一些方法:
+将上面的核心算法改(ctrl+c)写(ctrl+v)成python
 
-class Random(random.Random):#或_random.Random,_random是built-in模块
-  pass#def一些函数来改写,例如random,seed等
+### 使用:
+
+a=random.RandomObject()#默认种子是int(time.time())
+
+a.seed(seed)#相当于random.seed()
+
+a.int32()#python random的核心算法,应该是返回0-2^32-1之间的数字,但没有暴露在random和_random模块里
+
+a.random()#相当于random.random()
 
 写这个主要是自己平时用着方便
