@@ -14,4 +14,4 @@ a.int32()#python random的核心算法,应该是返回0-2^32-1之间的数字,�
 
 a.random()#相当于random.random()
 
-写这个主要是自己平时用着方便
+写这个主要是自己平时用着方便,里面包含一个已经解包的RandomObject
